@@ -1,0 +1,52 @@
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>myProject.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>myProject.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/servlet3</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>myProject.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/servletRegister</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>CreateIdea</servlet-name>
+        <servlet-class>myProject.IdeaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateIdea</servlet-name>
+        <url-pattern>/createIdea</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DisplayIdeas</servlet-name>
+        <servlet-class>myProject.DisplayIdeas</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayIdeas</servlet-name>
+        <url-pattern>/displayIdea</url-pattern>
+    </servlet-mapping>
+
+</web-app>
