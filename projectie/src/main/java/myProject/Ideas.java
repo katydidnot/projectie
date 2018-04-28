@@ -2,16 +2,25 @@ package myProject;
 
 public class Ideas
 {
-    private String idea;
+    private String ideaDetail;
+    public Ideas (String ideaDetail)
+    {
+        this.ideaDetail =ideaDetail;
+    }
 
-    public void setIdea(String idea)
+    public void setIdea(String ideaDetail)
 
     {
-        this.idea = idea;
+        this.ideaDetail = ideaDetail;
     }
     public String getIdea()
     {
-        return idea;
+        return ideaDetail;
     }
 
+    @Override
+    public String toString()
+    {
+        return String.format(ideaDetail);
+    }
 }

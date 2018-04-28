@@ -11,7 +11,7 @@ public class RegisterDAO {
         {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/plumeproject?" +
                     "user=root&password=heykid23");
-            PreparedStatement userRegistered = conn.prepareStatement("insert into users values (?,?,?)");
+            PreparedStatement userRegistered = conn.prepareStatement("insert into users (email, password, username) values (?,?,?)");
             userRegistered.setString(1,email);
             userRegistered.setString(2,password);
             userRegistered.setString(3,username);

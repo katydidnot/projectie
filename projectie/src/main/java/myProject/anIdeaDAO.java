@@ -33,7 +33,6 @@ public class anIdeaDAO
                         conn.close();
 
                 } catch (SQLException ex) {
-        //learn more about this. you don't fully understand it.
         System.out.println("SQLException: " + ex.getMessage());
         System.out.println("SQLState: " + ex.getSQLState());
         }
@@ -42,16 +41,15 @@ public class anIdeaDAO
 
         public static List<Ideas> displayIdeas()
         {
-                List<Ideas> ideas = new ArrayList<Ideas>();
+                List<Ideas> ideaList = new ArrayList<Ideas>();
                 try {
 
-                        Statement statement = getConnection().createStatement();
+                        Statement statement = anIdeaDAO.getConnection().createStatement();
                         ResultSet rs = statement.executeQuery("select * from idea");
                         while (rs.next()) {
-                                Ideas idea = new Ideas();
-                                idea.setIdea(rs.getString("theIdea"));
-                                ideas.add(idea);
-                                System.out.println(ideas);
+                                String ideaDetail = rs.getString("theIdea");
+                                Ideas idea = new Ideas(ideaDetail);
+                                ideaList.add(idea);
                         }
 
                 }
@@ -59,7 +57,7 @@ public class anIdeaDAO
                         System.out.println("SQLException: " + ex.getMessage());
                         System.out.println("SQLState: " + ex.getSQLState());
                 }
-        return ideas;
+        return ideaList;
 
         }
 

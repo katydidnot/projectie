@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <style type ="text/css">
 html body{
@@ -13,14 +14,34 @@ color: #DAF7A6 !important;
 <%@ include file="/WEB-INF/header.html" %>
 
 
+<div class = "container">
+    <div class ="row mt-5">
+        <div class ="col-lg-12 mx.auto">
+
+        <h2>Groups</h2>    <a href="CreateGroup.jsp" class="btn btn-outline-warning btn-med active" role="button" aria-pressed="true">Click Here to Create a Group.</a>
+        <div class = "col-lg-5 align-center mt-5">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Avaliable Groups</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <c:forEach items="${group}" var="i">
+
+                                            <tr>
+                                                <td>
+                                                    <c:out value="${i}"/>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+                                    </tbody>
+                                </div>
 
 
-
-
-
-
-
-
+        </div>
+    </div>
+</div>
 
 
 

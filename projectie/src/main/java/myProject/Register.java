@@ -27,7 +27,7 @@ public class Register extends HttpServlet {
         {
         if(RegisterDAO.validation(a,b,c))
         {
-            RequestDispatcher rd = request.getRequestDispatcher("welcome.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("GroupWelcomePage.jsp");
             rd.forward(request,response);
         }
         else

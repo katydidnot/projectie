@@ -3,6 +3,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,8 +26,16 @@ public class WelcomeServlet extends HttpServlet
         try{
         if(LoginDAO.validation(a,b))
         {
-            RequestDispatcher rd = request.getRequestDispatcher("welcome.jsp");
+
+            List<Ideas> ideas = anIdeaDAO.displayIdeas();
+            request.setAttribute("idea", ideas);
+
+            List<Groups> group = GroupDAO.displayGroups();
+            request.setAttribute("group", group);
+            RequestDispatcher rd = request.getRequestDispatcher("GroupWelcomePage.jsp");
             rd.forward(request,response);
+
+
         }
         else
         {

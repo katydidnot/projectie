@@ -15,11 +15,13 @@ public class DisplayIdeas extends HttpServlet{
 
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
-
+        //ask questions about a controller? ACTIONS?
+        response.setContentType("text/html");
         try
         {
+
             List<Ideas> ideas = anIdeaDAO.displayIdeas();
-            request.setAttribute("ideas", ideas);
+            request.setAttribute("idea", ideas);
             request.getRequestDispatcher("/welcome.jsp").forward(request,response);
 
 

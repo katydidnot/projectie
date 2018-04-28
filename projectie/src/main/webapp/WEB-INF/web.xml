@@ -16,7 +16,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
-        <url-pattern>/servlet3</url-pattern>
+        <url-pattern>/Welcome</url-pattern>
     </servlet-mapping>
 
 
@@ -47,6 +47,16 @@
     <servlet-mapping>
         <servlet-name>DisplayIdeas</servlet-name>
         <url-pattern>/displayIdea</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GroupServlet</servlet-name>
+        <servlet-class>myProject.GroupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GroupServlet</servlet-name>
+        <url-pattern>/CreateGroup</url-pattern>
     </servlet-mapping>
 
 </web-app>
