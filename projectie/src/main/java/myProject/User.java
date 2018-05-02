@@ -50,6 +50,6 @@ public class User {
     @Override
     public String toString()
     {
-        return String.format(username, email);
+        return String.format(username);
     }
 }
