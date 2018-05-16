@@ -21,6 +21,7 @@ public class LoginDAO
             ResultSet rs = userTrue.executeQuery();
             loggy =rs.next();//look into this figure it out.
             conn.close();
+
         }
         catch(SQLException ex)
         {

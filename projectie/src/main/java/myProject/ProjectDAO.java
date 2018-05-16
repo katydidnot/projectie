@@ -1,11 +1,11 @@
-
 package myProject;
-        import javafx.scene.Group;
-        import java.sql.*;
-        import java.util.List;
-        import java.util.ArrayList;
-public class GroupDAO {
 
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProjectDAO
+{
     public static Connection getConnection() {
         Connection conn = null;
         try {
@@ -13,54 +13,50 @@ public class GroupDAO {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/plumeproject?" +
                     "user=root&password=heykid23");
         } catch (SQLException ex) {
-            //learn more about this. you don't fully understand it.
+
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
         }
         return conn;
     }
-
-    public static boolean createGroup(String group) {
-        boolean createGroup = false;
+    public static boolean createProject(String project)
+    {
+        boolean createProject = false;
         try {
-            Connection conn = GroupDAO.getConnection();
-            PreparedStatement created = conn.prepareStatement("insert into groups (groupName) values (?)");
-            created.setString(1, group);
+            Connection conn = ProjectDAO.getConnection();
+            PreparedStatement created = conn.prepareStatement("insert into projects (projectName) values (?)");
+            created.setString(1, project);
             created.executeUpdate();
-            createGroup = true;
+            createProject = true;
             conn.close();
 
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
         }
-        return createGroup;
+        return createProject;
     }
-
-    public static List<Groups> displayGroups() {
-        List<Groups> groupList = new ArrayList<Groups>();
+    public static List<Projects> displayProjects() {
+        List<Projects> projectList = new ArrayList<Projects>();
         try {
 
             Statement statement = GroupDAO.getConnection().createStatement();
-            ResultSet rs = statement.executeQuery("select * from groups");
+            ResultSet rs = statement.executeQuery("select projectId from groups ");
             while (rs.next()) {
-                String name = rs.getString("groupName");
-                int id = rs.getInt("groupId");
-                Groups group = new Groups(name, id);
-                groupList.add(group);
+                String name = rs.getString("projectName");
+                int id = rs.getInt("projectId");
+                boolean isComplete =rs.getBoolean("isComplete");
+                Projects project = new Projects(name, isComplete, id);
+                projectList.add(project);
             }
 
         } catch (SQLException ex) {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
         }
-        return groupList;
+        return projectList;
+
 
     }
 
-    }
-
-
-
-
-
+}

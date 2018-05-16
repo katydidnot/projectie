@@ -18,9 +18,9 @@ public class RegisterDAO {
             userRegistered.executeUpdate();
             userRegistered.close();
             registered =true;
-            System.out.println(email);
-            System.out.println(password);
-            System.out.println(username);
+            int id = 0;
+            User user = new User(email, password, username, id);
+
     }
     catch(SQLException ex)
     {

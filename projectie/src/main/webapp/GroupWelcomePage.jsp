@@ -27,11 +27,14 @@ color: #DAF7A6 !important;
                                         </tr>
                                     </thead>
                                     <tbody>
+
                                         <c:forEach items="${group}" var="i">
 
                                             <tr>
                                                 <td>
+                                                 <a href ="GroupDisplay.jsp" name ="currentGroupName">
                                                     <c:out value="${i}"/>
+                                                 </a>
                                                 </td>
                                             </tr>
                                         </c:forEach>

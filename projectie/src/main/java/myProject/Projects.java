@@ -1,51 +1,43 @@
 package myProject;
 
 public class Projects {
-    private String users;
-    private String tasks;
     private boolean isComplete;
-    private String groupQs;
-    private String ideas;
+    private String name;
+    private int id;
+    public Projects (String name, boolean isComplete, int id )
+    {
+        this.name = name;
+        this.isComplete = isComplete;
+        this.id = id;
+    }
 
-    private void setUsers(String users) {
-        this.users = users;
-    }
-    private void setTasks(String tasks) {
-        this.tasks = tasks;
+    private void setIsComplete(boolean isComplete) {
+        this.isComplete = isComplete;
     }
 
-    private void setIsComplete(boolean isComplete)
+    public void setId(int id)
     {
-    this.isComplete =isComplete;
+        this.id = id;
     }
-    private void setGroupQs(String groupQs)
+    public int getId()
     {
-        this.groupQs = groupQs;
+        return id;
     }
-    private void setIdeas(String ideas)
-    {
-        this.ideas = ideas;
-    }
-    public String getUsers()
-    {
-        return users;
-    }
-    public String getTasks()
-    {
-        return tasks;
-    }
-    public boolean getIsComplete()
-    {
+    public boolean getIsComplete() {
         return isComplete;
     }
-    public String getGroupQs()
+    public void setName(String name)
     {
-        return groupQs;
-
+        this.name = name;
     }
-    public String getIdeas()
+    public String getName()
     {
-        return ideas;
+        return name;
+    }
+    @Override
+    public String toString()
+    {
+        return String.format(name);
     }
 
 }

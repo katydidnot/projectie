@@ -22,7 +22,7 @@ public class WelcomeServlet extends HttpServlet
 
         String a = request.getParameter("email");
         String b = request.getParameter("password");
-
+        String c = request.getParameter("username");
         try{
         if(LoginDAO.validation(a,b))
         {
@@ -32,6 +32,11 @@ public class WelcomeServlet extends HttpServlet
 
             List<Groups> group = GroupDAO.displayGroups();
             request.setAttribute("group", group);
+
+            HttpSession session=request.getSession();
+            session.setAttribute("username", c);
+            System.out.println(c);
+
             RequestDispatcher rd = request.getRequestDispatcher("GroupWelcomePage.jsp");
             rd.forward(request,response);
 

@@ -1,14 +1,6 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
 
-    <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>myProject.HelloServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/servlet</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>WelcomeServlet</servlet-name>
@@ -41,12 +33,12 @@
 
 
     <servlet>
-        <servlet-name>DisplayIdeas</servlet-name>
-        <servlet-class>myProject.DisplayIdeas</servlet-class>
+        <servlet-name>DisplayUsers</servlet-name>
+        <servlet-class>myProject.DisplayUsers</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DisplayIdeas</servlet-name>
-        <url-pattern>/displayIdea</url-pattern>
+        <servlet-name>DisplayUsers</servlet-name>
+        <url-pattern>/displayUsers</url-pattern>
     </servlet-mapping>
 
 
