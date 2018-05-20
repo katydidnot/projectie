@@ -1,55 +1,44 @@
 package myProject;
 
 public class User {
-    private String email;
-    private String password;
     private String username;
-    private int id;
-    public User (String email, String password, String username, int id)
+    private int userId;
+    private String password;
+
+    public User(int userId, String password, String username)
     {
-        this.email = email;
+        this.userId = userId;
         this.password = password;
-        this.username = username;
-        this.id = id;
-    }
+        this.username =username;
 
-    public void setEmail(String email)
-    {
-        this.email = email;
     }
-    public void setUsename(String username)
-    {
+    public void setUsername(String username) {
         this.username = username;
     }
-    public void setId(int id)
-    {
-        this.id =id;
-    }
 
-    public void setPassword(String password) {
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+    public void setPassword(String password)
+    {
         this.password = password;
     }
     public String getUsername()
     {
         return username;
     }
-    public int getId()
+    public int getUserId()
     {
-        return id;
+        return userId;
     }
-    public String getEmail()
-    {
-        return email;
-    }
-
     public String getPassword()
     {
         return password;
     }
-
     @Override
-    public String toString()
-    {
+    public String toString() {
         return String.format(username);
+
     }
+
 }

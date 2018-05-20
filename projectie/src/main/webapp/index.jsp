@@ -1,8 +1,9 @@
+
+
 <html>
 <body>
-<%@ include file="/WEB-INF/header.html" %>
-<%@ include file="/WEB-INF/login.html" %>
-
+<%@ include file="/WEB-INF/Header.html" %>
+<%@ include file="/WEB-INF/loginform.html" %>
 
 </body>
 </html>

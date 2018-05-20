@@ -3,52 +3,55 @@
 
 
     <servlet>
-        <servlet-name>WelcomeServlet</servlet-name>
-        <servlet-class>myProject.WelcomeServlet</servlet-class>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>myProject.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>WelcomeServlet</servlet-name>
-        <url-pattern>/Welcome</url-pattern>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
 
 
     <servlet>
-        <servlet-name>Register</servlet-name>
-        <servlet-class>myProject.Register</servlet-class>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>myProject.RegistrationServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Register</servlet-name>
-        <url-pattern>/servletRegister</url-pattern>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
 
 
+
     <servlet>
-        <servlet-name>CreateIdea</servlet-name>
-        <servlet-class>myProject.IdeaServlet</servlet-class>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>myProject.ProductServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CreateIdea</servlet-name>
-        <url-pattern>/createIdea</url-pattern>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/AddProduct</url-pattern>
     </servlet-mapping>
 
 
+
     <servlet>
-        <servlet-name>DisplayUsers</servlet-name>
-        <servlet-class>myProject.DisplayUsers</servlet-class>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>myProject.SearchServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>DisplayUsers</servlet-name>
-        <url-pattern>/displayUsers</url-pattern>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchProduct</url-pattern>
     </servlet-mapping>
 
 
+
     <servlet>
-        <servlet-name>GroupServlet</servlet-name>
-        <servlet-class>myProject.GroupServlet</servlet-class>
+        <servlet-name>ItemPageServlet</servlet-name>
+        <servlet-class>myProject.ItemPageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>GroupServlet</servlet-name>
-        <url-pattern>/CreateGroup</url-pattern>
+        <servlet-name>ItemPageServlet</servlet-name>
+        <url-pattern>/Item</url-pattern>
     </servlet-mapping>
 
 </web-app>
