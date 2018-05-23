@@ -22,7 +22,7 @@
                                                         <tr>
                                                             <td>
                                                                 <div class ="row">
-                                                                <form method = "GET" action = "/Item" ><c:out value="${i}"/><input type="hidden" name="productName" value="${i}"><button type="submit" name = "productName" class="btn btn-light active btn-sm" role ="button" aria-pressed="true">Submit</button></form></div>
+                                                                <form method = "GET" action = "/Item" ><c:out value="${i}"/><input type="hidden" name="productName" value="${i}"><button type="submit" name = "productName" class="btn btn-light active btn-sm" role ="button" aria-pressed="true">Edit</button></form></div>
                                                             </td>
                                                         </tr>
                                                     </c:forEach>

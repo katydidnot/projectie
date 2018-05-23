@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div class= "container mx.auto">
+<form method = "POST" action = "/Login">
+    <div class = "row mt-5">
+    <div class="col-md-3"></div>
+        <div class = col-md-6>
+        <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text">@</div>
+            </div>
+            <input type="text"  name ="username" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+        </div>
+        </div>
+        <div class ="col-md-3"></div>
+    </div>
+    <div class = "row mt-2">
+        <div class="col-md-3"></div>
+        <div class = col-md-6>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" name = "password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class ="row mt-5">
+    <div class = "col-md-5"></div>
+    <div class ="col-md-2">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div class = "col-md-5"></div>
+    </div>
+    <div class ="row">
+        <div class ="col-lg-5"></div>
+        <div class ="col-lg-2">
+            <a href="/Register.jsp" class="btn btn-light active btn-sm mt-3" role="button" aria-pressed="true">Register</a>
+        </div>
+        <div class ="col-lg-5"></div>
+    </div>
+</form>
+</div>
+</body>
+</html>

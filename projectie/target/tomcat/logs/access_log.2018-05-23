@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:50:52 -0500] "GET / HTTP/1.1" 200 3508 http-bio-8888-exec-1 1033
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:51:00 -0500] "POST /Login HTTP/1.1" 200 4789 http-bio-8888-exec-2 544
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:51:09 -0500] "GET /AddProduct.jsp HTTP/1.1" 200 6521 http-bio-8888-exec-3 277
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:51:30 -0500] "POST /AddProduct HTTP/1.1" 200 4789 http-bio-8888-exec-4 53
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:51:44 -0500] "GET /AddProduct?currentCategory=Flowers HTTP/1.1" 200 6096 http-bio-8888-exec-5 470
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:52:00 -0500] "GET /SearchProduct?productSearch=Anemone HTTP/1.1" 200 4246 http-bio-8888-exec-6 239
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:52:11 -0500] "GET /Item?productName=Anemones&productName= HTTP/1.1" 200 6619 http-bio-8888-exec-7 200
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:52:22 -0500] "POST /Item HTTP/1.1" 500 1741 http-bio-8888-exec-8 15
+0:0:0:0:0:0:0:1 - - [23/May/2018:17:52:48 -0500] "GET /HomePage.jsp HTTP/1.1" 200 4789 http-bio-8888-exec-10 0

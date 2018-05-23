@@ -19,8 +19,8 @@ public class ItemPageServlet extends HttpServlet {
             int productId = ProductDao.getProductid(q);
             String a = q;
             String b = ProductDao.getProductCategory(productId);
-            String c = ProductDao.getStartDateInt(productId);
-            String d = ProductDao.getEndDateInt(productId);
+            String c = ProductDao.getStartDateString(productId);
+            String d = ProductDao.getEndDateString(productId);
                 request.setAttribute("productName", a);
                 request.setAttribute("productCategory", b);
                 request.setAttribute("startDate", c);
@@ -40,9 +40,10 @@ public class ItemPageServlet extends HttpServlet {
         String b = request.getParameter("productCategory");
         String parseOne =  request.getParameter("startDate");
         String parseTwo = request.getParameter("endDate");
-
         int c = Integer.parseInt(parseOne);
         int d = Integer.parseInt(parseTwo);
+        System.out.println(c);
+        System.out.println(d);
 
         try {
 

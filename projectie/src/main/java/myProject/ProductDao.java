@@ -173,7 +173,7 @@ public class ProductDao
         }
         return id;
     }
-    public static String getStartDateInt(int id )
+    public static String getStartDateString(int id )
     {
         int start = 0;
         try {
@@ -194,7 +194,7 @@ public class ProductDao
         return new DateFormatSymbols().getMonths()[start-1];
 
     }
-    public static String getEndDateInt(int id)
+    public static String getEndDateString(int id)
     {
         int end = 0;
         try {
